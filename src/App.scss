@@ -1,0 +1,25 @@
+@import "src/sass/reset";
+@import "src/sass/variables";
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: $app-background;
+}
+
+.app {
+    margin: 30px 20px;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+}
