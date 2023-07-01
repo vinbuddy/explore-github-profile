@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { IUser } from "src/interface";
+import { IRepo, IUser } from "src/interface";
 
 export const userApi = createApi({
     reducerPath: "userApi",
@@ -9,7 +9,10 @@ export const userApi = createApi({
         getUser: builder.query<IUser, string>({
             query: (userName: string) => `users/${userName}`,
         }),
+        getRepos: builder.query<IRepo[], string>({
+            query: (userName) => `users/${userName}/repos`,
+        }),
     }),
 });
 
-export const { useGetUserQuery } = userApi;
+export const { useLazyGetUserQuery, useGetReposQuery } = userApi;

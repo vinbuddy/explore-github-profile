@@ -23,3 +23,37 @@ body {
     max-width: 700px;
     margin: 0 auto;
 }
+
+.loading {
+    z-index: 2;
+    color: $secondary;
+    margin-top: 10px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    animation: loading linear 0.3s infinite;
+    overflow: hidden;
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+// Copy bootstrap
+.d-flex {
+    display: flex;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
